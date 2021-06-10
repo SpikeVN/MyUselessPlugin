@@ -1,0 +1,22 @@
+name: MyUselessPlugin
+version: ${project.version}
+main: me.spike.myuselessplugin.MyUselessPlugin
+api-version: 1.16
+prefix: [ MyUselessPlugin ]
+load: STARTUP
+authors: [ SpikeVN ]
+description: Useless plugin that does absolutely nothing (tm)
+commands:
+  blow:
+    description: Nổ vỡ đầu ai đó
+    usage: /blow <player>
+    aliases: [kaboom, boom]
+  crackhead:
+    description: Làm đe rơi vỡ đầu
+    usage: /crackhead <player>
+    aliases: [vodau, ch]
+  trap:
+    description: Bẫy ai đó trong bedrock
+    usage: /trap <player>
+    aliases: [bedrock]
+
