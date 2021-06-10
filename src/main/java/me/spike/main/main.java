@@ -12,15 +12,9 @@ just the license. same to none
 package me.spike.main;
 
 import me.spike.commands.commands;
-import me.spike.utils.utils;
-import org.bukkit.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.inventory.InventoryOpenEvent;
-import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Locale;
@@ -52,6 +46,16 @@ public final class main extends JavaPlugin implements Listener {
         if (cmd.equals("TRAP")) {
             commands.trap(sender, args);
         }
+        /*if (cmd.contains("GM")) {
+            commands.gm(sender, args, command);
+        }
+        if (cmd.equals("GIV")) {
+            commands.give(sender, args);
+        }
+        if (cmd.equals("TPA")) {
+
+        }*/
         return true;
+
     }
 }

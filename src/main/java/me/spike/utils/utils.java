@@ -1,6 +1,7 @@
 package me.spike.utils;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
 public class utils {
@@ -14,18 +15,26 @@ public class utils {
         return victim;
     }
 
-    public static boolean hasNoArgs(String[] a) {
-        boolean b = false;
-        try {
-            Player player1 = NameToPlayer(a[0]);
-        } catch (Exception x) {     //Exception happens when no parameters is used
-            b = true;
-        }
-        return b;
-    }
-
     public static void pause(long time) {
         long a = System.currentTimeMillis();
-        while (a >= System.currentTimeMillis() - time) ;    //do nothing and wait ms.
+        while (a >= System.currentTimeMillis() - time) ;    //do nothing and wait ms.\
+    }
+
+    public static Material NameToMaterial(String name) {
+        for (Material x : Material.values()) {
+            if (x.name().equalsIgnoreCase(name)) {
+                return x;
+            }
+        }
+        return null;
+    }
+
+    public static int emptySlot(Player player) {
+        for (int i = 0; i < 36; i++) {
+            if (player.getInventory().getItem(i) == null) {
+                return i;
+            }
+        }
+        return -1;
     }
 }

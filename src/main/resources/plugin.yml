@@ -19,4 +19,23 @@ commands:
     description: Bẫy ai đó trong bedrock
     usage: /trap <player>
     aliases: [bedrock]
+  gm:
+    description: Chuyển gamemode
+    usage: /gm <gamemode>
+  gmc:
+    description: Chuyển gamemode sang sáng tạo
+    usage: /gmc
+  gms:
+    description: Chuyển gamemode sang sinh tồn
+    usage: /gms
+  gma:
+    description: Chuyển gamemode sang phiêu lưu
+    usage: /gma
+  gmsp:
+    description: Chuyển gamemode sang khán giả
+    usage: /gmsp
+  giv:
+    description: Đưa đồ một cách ngắn gọn.
+    usage: /giv <item> <amount> <player>
+    aliases: [i]
 
