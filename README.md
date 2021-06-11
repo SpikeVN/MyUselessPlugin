@@ -1,2 +1,2 @@
 # MyUselessPlugin
- Exacly what the title says. >>> [download](github.com/SpikeVN/MyUselessPlugin/releases) <<<
+ Exacly what the title says. >>> [download](/releases) <<<
