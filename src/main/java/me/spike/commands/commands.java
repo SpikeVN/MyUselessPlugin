@@ -13,48 +13,61 @@ import java.util.Objects;
 
 public class commands {
     public static void blow(CommandSender sender, String[] a) {
-        Player victim;
-        if(a.length == 0) {
-            victim = (Player) sender;
+        if (sender instanceof Player) {
+            Player victim;
+            if(a.length == 0) {
+                victim = (Player) sender;
+            } else {
+                victim = utils.NameToPlayer(a[0]);
+            }
+            victim.getWorld().spawnEntity(victim.getLocation(), EntityType.PRIMED_TNT);
         } else {
-            victim = utils.NameToPlayer(a[0]);
+            sender.sendMessage("[MyUselessPlugin]" + ChatColor.RED + " NOOOOOO YOU CAN'T JUST TYPE COMMAND LIKE THAT I CAN'T BLOW YOU UP");
         }
-        victim.getWorld().spawnEntity(victim.getLocation(), EntityType.PRIMED_TNT);
+
     }
     public static void crackhead(CommandSender sender, String[] a) {
-        Player victim;
-        if (a.length == 0) {
-            victim = (Player) sender;
-        } else {
-            victim = utils.NameToPlayer(a[0]);
-        }
+        if (sender instanceof Player) {
+            Player victim;
+            if (a.length == 0) {
+                victim = (Player) sender;
+            } else {
+                victim = utils.NameToPlayer(a[0]);
+            }
             Location location = victim.getLocation().add(0, 2, 0);
-            location.add(0, -1, 0).getBlock().setType(Material.BEDROCK);
             location.getBlock().setType(Material.ANVIL, true);
-            location.add(0, -1, 0).getBlock().setType(Material.AIR, true);
-        }
-    public static void trap(CommandSender sender, String[] a) {
-        Player victim;
-        if (a.length == 0) {
-            victim = (Player) sender;
         } else {
-            victim = utils.NameToPlayer(a[0]);
+            sender.sendMessage("[MyUselessPlugin]" + ChatColor.RED + " Hey how am I supposed to crack your head???");
         }
-        Location victimFeet = victim.getLocation();
-        Material BlockOccupied = victimFeet.add(0,-1,0).getBlock().getType();
-        System.out.println(victim.getName() + "has been trapped by " + sender + " at " + victimFeet);
-        victimFeet.add(0,-1,0).getBlock().setType(Material.BEDROCK);
-        victimFeet.add(1, 0, 0).getBlock().setType(Material.BEDROCK);
-        victimFeet.add(-1, 0, 0).getBlock().setType(Material.BEDROCK);
-        victimFeet.add(0, 0, 1).getBlock().setType(Material.BEDROCK);
-        victimFeet.add(0, 0, -1).getBlock().setType(Material.BEDROCK);
-        victimFeet.add(0, 2, 0).getBlock().setType(Material.BEDROCK);   //TRAP VICTIM IN BEDROCK CAGE
-        victim.sendMessage(ChatColor.RED + "Bạn đã bị bẫy trong bedrock bởi " + sender);
-        for (int i = 0; i <= 5; i++) {
-            victim.sendMessage(ChatColor.RED + "Bạn sẽ được thả sau" + i + "s");
-            utils.pause(1000);
+
+    }
+    public static void trap(CommandSender sender, String[] a) {
+        if (sender instanceof Player) {
+            Player victim;
+            if (a.length == 0) {
+                victim = (Player) sender;
+            } else {
+                victim = utils.NameToPlayer(a[0]);
+            }
+            Location victimFeet = victim.getLocation();
+            Material BlockOccupied = victimFeet.add(0,-1,0).getBlock().getType();
+            System.out.println(victim.getName() + "has been trapped by " + sender + " at " + victimFeet);
+            victimFeet.add(0,-1,0).getBlock().setType(Material.BEDROCK);
+            victimFeet.add(1, 0, 0).getBlock().setType(Material.BEDROCK);
+            victimFeet.add(-1, 0, 0).getBlock().setType(Material.BEDROCK);
+            victimFeet.add(0, 0, 1).getBlock().setType(Material.BEDROCK);
+            victimFeet.add(0, 0, -1).getBlock().setType(Material.BEDROCK);
+            victimFeet.add(0, 2, 0).getBlock().setType(Material.BEDROCK);   //TRAP VICTIM IN BEDROCK CAGE
+            victim.sendMessage(ChatColor.RED + "Bạn đã bị bẫy trong bedrock bởi " + sender);
+            for (int i = 0; i <= 5; i++) {
+                victim.sendMessage(ChatColor.RED + "Bạn sẽ được thả sau" + i + "s");
+                utils.pause(1000);
+            }
+            victimFeet.add(0,-1,0).getBlock().setType(BlockOccupied);
+        } else {
+            sender.sendMessage("[MyUselessPlugin]" + ChatColor.RED + " Well, guess what, I can't trap you.");
         }
-        victimFeet.add(0,-1,0).getBlock().setType(BlockOccupied);
+
     }
 
     public static void gm(CommandSender sender, String[] a, Command cmd) {
@@ -124,4 +137,10 @@ public class commands {
             sender.sendMessage(ChatColor.RED + "Câu lệnh của bạn bị thừa!");
         }
     }
+    public static void mup(CommandSender sender, String[] a) {
+        sender.sendMessage(ChatColor.DARK_RED + "-----------------------------------");
+        sender.sendMessage(ChatColor.GOLD + "MyUselessPlugin v0.3 - by Spike_VN");
+        sender.sendMessage(ChatColor.GOLD + "-----------------------------------");
+    }
 }
+

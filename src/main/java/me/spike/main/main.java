@@ -12,6 +12,7 @@ just the license. same to none
 package me.spike.main;
 
 import me.spike.commands.commands;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.Listener;
@@ -36,26 +37,35 @@ public final class main extends JavaPlugin implements Listener {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        String cmd = command.getName().toUpperCase(Locale.ROOT);
-        if (cmd.equals("BLOW")) {
-            commands.blow(sender, args);
-        }
-        if (cmd.equals("CRACKHEAD")) {
-            commands.crackhead(sender, args);
-        }
-        if (cmd.equals("TRAP")) {
-            commands.trap(sender, args);
-        }
-        /*if (cmd.contains("GM")) {
+        try {
+            String cmd = command.getName().toUpperCase(Locale.ROOT);
+            if (cmd.equals("BLOW")) {
+                commands.blow(sender, args);
+            }
+            if (cmd.equals("CRACKHEAD")) {
+                commands.crackhead(sender, args);
+            }
+            if (cmd.equals("TRAP")) {
+                commands.trap(sender, args);
+            }
+            if (cmd.equals("MUP")) {
+                commands.mup(sender, args);
+            }
+            if (cmd.contains("GM")) {
             commands.gm(sender, args, command);
-        }
-        if (cmd.equals("GIV")) {
+            }
+            if (cmd.equals("GIV")) {
             commands.give(sender, args);
-        }
-        if (cmd.equals("TPA")) {
+            }
+            if (cmd.equals("TPA")) {
 
-        }*/
+            }
+        } catch (Exception x) {
+            System.out.println("[MyUselessPlugin]" + ChatColor.RED + " An error occurred when executing commands: " + x);
+        }
+
         return true;
 
     }
 }
+

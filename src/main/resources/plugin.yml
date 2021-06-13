@@ -1,7 +1,7 @@
 name: MyUselessPlugin
 version: ${project.version}
 main: me.spike.myuselessplugin.MyUselessPlugin
-api-version: 1.16
+api-version: 1.17
 prefix: [ MyUselessPlugin ]
 load: STARTUP
 authors: [ SpikeVN ]

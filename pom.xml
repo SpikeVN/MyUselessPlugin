@@ -6,12 +6,12 @@
 
     <groupId>me.spike</groupId>
     <artifactId>MyUselessPlugin</artifactId>
-    <version>0.2</version>
+    <version>0.6</version>
     <packaging>jar</packaging>
 
-    <name>MyUselessPlugin</name>
+    <name>MainPlugin</name>
 
-    <description>Useless plugin that does absolutely nothing (tm)</description>
+    <description>A plugin that does nothing, apparently.</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -68,7 +68,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.16.5-R0.1-SNAPSHOT</version>
+            <version>1.17-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

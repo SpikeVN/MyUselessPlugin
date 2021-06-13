@@ -17,7 +17,7 @@ public class utils {
 
     public static void pause(long time) {
         long a = System.currentTimeMillis();
-        while (a >= System.currentTimeMillis() - time) ;    //do nothing and wait ms.\
+        while (a >= System.currentTimeMillis() - time) ;    //do nothing and wait ms.
     }
 
     public static Material NameToMaterial(String name) {
