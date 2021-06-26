@@ -12,11 +12,11 @@ Warning: Due to my laziness, it might be untested.
 Download the source code, and build it.  
 Using an IDE will make the work easier.  
 ### FAQ
-**Is this a virus? A backdoor?**  
+*Is this a virus? A backdoor?  
 No.  
-**Is this really do anything?**  
+*Is this really do anything?  
 No.  
-**Will there be an older ver-**  
+*Will there be an older ver-  
 No.  
 ## VI - Việt Nam
 ### Giới thiệu
@@ -31,10 +31,10 @@ Cảnh báo: Vì tôi lười, nên plugin có thể chưa được test.
 Tải code xuống và buid.  
 Dùng IDE cho dễ.  
 ### FAQ
-**Đây là virus à? Hay là quà backdoor của iTristan từ 2b2t?**  
+*Đây là virus à? Hay là quà backdoor của iTristan từ 2b2t?  
 Không.  
-**Nó có tác dụng gì không?**  
+*Nó có tác dụng gì không?  
 Không.  
-**Có phiên bản cũ hơn khô-**  
+*Có phiên bản cũ hơn khô-  
 Không.  
 

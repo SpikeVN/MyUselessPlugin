@@ -8,11 +8,11 @@
 # This is MyUselessPlugin's config
 # Haven't nailed it yet, so it is very basic.
 # Enabling this will enable all trolls.
-enable-trolls: 'true'
-# These are independent settings for each modules.
-# This will be ignored if enable-trolls is false.
-blow: 'true'
-crackhead: 'true'
-kaboom: 'true'
+enable-trolls: true
+  # These are independent settings for each modules.
+  # This will be ignored if enable-trolls is false.
+  blow: true
+  crackhead: true
+  kaboom: true
 
-# End of File  <-- Taken this line from Essentials Config
+# End of File  <-- Stole this line from Essentials Config
