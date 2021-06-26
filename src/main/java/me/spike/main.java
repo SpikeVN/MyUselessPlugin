@@ -126,7 +126,7 @@ public final class main extends JavaPlugin implements Listener {
                 }
             }
             // I can make it return false, but ¯\_(ツ)_/¯
-            
+
         }
         return true;
     }

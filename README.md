@@ -6,7 +6,7 @@ This is the plugin that Spike_VN usually uses to troll his friends.
 The troll might be too severe, but I don't care.  
 ### Installation
 #### For normal people:
-Take the newest release [here](https://github.com/SpikeVN/MyUselessPlugin/releases)  
+Take the latest release [here](https://github.com/SpikeVN/MyUselessPlugin/releases)  
 Warning: Due to my laziness, it might be untested.  
 #### For (200 IQ) developers:  
 Download the source code, and build it.  
