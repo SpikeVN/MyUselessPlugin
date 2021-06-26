@@ -1,5 +1,5 @@
 name: MyUselessPlugin
-version: ${project.version}
+version: 0.8-SNAPSHOT
 main: me.spike.main
 api-version: 1.17
 authors: [ SpikeVN ]

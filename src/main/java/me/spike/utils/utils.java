@@ -1,40 +1,29 @@
 package me.spike.utils;
 
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.logging.Level;
+
+import static org.bukkit.Bukkit.getLogger;
+
 public class utils {
-    public static Player NameToPlayer(String name) {
-        Player victim = null;
-        for (Player player : Bukkit.getOnlinePlayers()) {
-            if (player.getName().equals(name)) {
-                victim = player;
+    public static Player NameToPlayer(String a) {
+        Player player = null;
+        for (Player suspect : Bukkit.getOnlinePlayers()) {
+            if (suspect.getName().equals(a)) {
+                player = suspect;
+                break;
             }
         }
-        return victim;
+        return player;
     }
-
-    public static void pause(long time) {
-        long a = System.currentTimeMillis();
-        while (a >= System.currentTimeMillis() - time) ;    //do nothing and wait ms.
+    public static void pause(long ms) {
+        long start = System.currentTimeMillis();
+        while (ms <= System.currentTimeMillis() - start) { /* do nothing and wait ms*/ }
     }
-
-    public static Material NameToMaterial(String name) {
-        for (Material x : Material.values()) {
-            if (x.name().equalsIgnoreCase(name)) {
-                return x;
-            }
-        }
-        return null;
-    }
-
-    public static int emptySlot(Player player) {
-        for (int i = 0; i < 36; i++) {
-            if (player.getInventory().getItem(i) == null) {
-                return i;
-            }
-        }
-        return -1;
+    public static void exceptionHandler(Exception e, CommandSender sender) {
+        getLogger().log(Level.SEVERE, "[MyUselessPlugin] An error occurred when executing command. Please consult the server administrator." );
     }
 }
