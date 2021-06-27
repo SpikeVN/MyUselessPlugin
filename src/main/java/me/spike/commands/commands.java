@@ -30,22 +30,4 @@ public class commands {
         victim.sendMessage(ChatColor.GOLD + "KABOOM!");
     }
 
-    boolean stop = false;
-    public void disableBossbarTracker(Player player) {
-        stop = true;
-    }
-
-    public static void onperf(Player player) {
-        BossBar performance = null;
-            while (true) {
-                String perf = "TPS: %server_tps_1_colored%";
-                String tps = "%tps%";
-                PlaceholderAPI.setPlaceholders(player, perf);
-                PlaceholderAPI.setPlaceholders(player, tps);
-                performance.setColor(BarColor.YELLOW);
-                performance.setProgress(0.05 * Double.parseDouble(tps));
-                performance.setTitle(perf);
-            }
-    }
-
 }

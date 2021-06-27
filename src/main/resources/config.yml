@@ -1,18 +1,12 @@
 # MyUselessPlugin, version 0.7; config version 1
-#             !!! WARNING !!!
-#   1. Saving this settings somewhere else, it might be
-# deleted when the plugin updates!
-#   2. This config is depleted. The owner of this MyUselessPlugin
-# is bored and won't use it anymore.
 # ----------------------------------------------------------------
 # This is MyUselessPlugin's config
 # Haven't nailed it yet, so it is very basic.
-# Enabling this will enable all trolls.
-enable-trolls: true
-  # These are independent settings for each modules.
-  # This will be ignored if enable-trolls is false.
+trolls:
   blow: true
   crackhead: true
   kaboom: true
+functions:
+  throwable-fireball: true
+  one-player-sleep: true
 
-# End of File  <-- Stole this line from Essentials Config
